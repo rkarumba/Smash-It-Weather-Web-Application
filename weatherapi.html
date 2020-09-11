@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SMASH-IT | Real time Weather Application.</title>
+    <meta name="description" content="Real time Weather Application.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="Images/96x96.png">
+    <meta name = "apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="#ffe1c4">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <logo><span>Smash</span>IT</logo>
+
+            <a onclick="openNav()" class="menu" href="#"><img src="Images/Group 179.png"></a>
+
+
+
+
+        </nav>
+
+
+
+
+    </header>
+
+
+    <div id="mobile__menu" class="overlay">
+        <a class="close" onclick="closeNav()"><img src="/Images/Group 186.png"></a>
+        <div class="overlay__content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="Features.html">Features</a>
+        </div>
+
+    </div>
+
+    <main>
+        <div class="search">
+
+            <form id="myForm">
+                <input type="text" id="city" required placeholder="Search for City/Town">
+                <input type="submit" id="search" value="Get Weather">
+            </form>
+        </div>
+
+        <div class="weatherforecast">
+            Weather <strong>Forecast.</strong>
+        </div>
+
+        <div class="tables">
+            <div class="table">
+                <div class="weather-wrapper hide">
+
+                    <img src="" class="weather-icon" alt="Weather Icon" />
+
+                    <p><strong>Place</strong>
+                        <br /><span class="weather-place"></span></p>
+
+                    <p><strong>Temperature</strong>
+                        <br /><span class="weather-temperature"></span> (<span class="weather-min-temperature"></span> -
+                        <span class="weather-max-temperature"></span>)</p>
+
+                    <p><strong>Description</strong>
+                        <br /><span class="weather-description capitalize"></span></p>
+
+                    <p><strong>Humidity</strong>
+                        <br /><span class="weather-humidity"></span></p>
+
+                    <p><strong>Wind speed</strong>
+                        <br /><span class="weather-wind-speed"></span></p>
+
+                    <p><strong>Sunrise</strong>
+                        <br /><span class="weather-sunrise"></span></p>
+
+                    <p><strong>Sunset</strong>
+                        <br /><span class="weather-sunset"></span></p>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape(
+                "%3Cscript src='src/js/lib/jquery.1.9.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.20.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.20.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script src="script.js"></script>
+    <script src="open-weather-master/src/openweather.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
